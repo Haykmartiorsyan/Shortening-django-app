@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Link Shorter</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Created</h1>
+                <p>{{ object.url }}</p>
+                    {% if object.clickevent.count %}
+                    <p>Count {{ object.clickevent.count }}</p>
+                    {% endif %}
+                <p><a href="{{ object.get_short_url }}" target="_blank">{{ object.get_short_url }}</a></p>
+            <a href="/" class="btn btn-primary">+ New</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
